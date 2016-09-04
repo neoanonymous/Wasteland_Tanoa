@@ -66,3 +66,5 @@ if (_player == player) then
 	thirstLevel = 100;
 	hungerLevel = 100;
 };
+
+["Open",true] spawn BIS_fnc_arsenal;
