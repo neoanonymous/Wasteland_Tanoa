@@ -166,7 +166,8 @@ if (isServer) then
 		"A3W_vehicleLocking",
 		"A3W_disableBuiltInThermal",
 		"A3W_customDeathMessages",
-		"A3W_headshotNoRevive"
+		"A3W_headshotNoRevive",
+		"gearLevel"
 	];
 
 	addMissionEventHandler ["PlayerConnected", fn_onPlayerConnected];
@@ -529,7 +530,7 @@ else
 {
 	_storeGroup = createGroup sideLogic;
 	{
-		if (!isPlayer _x && {(toLower ((vehicleVarName _x) select [0,8])) in ["genstore","gunstore","vehstore"]}) then
+		if (!isPlayer _x && {(toLower ((vehicleVarName _x) select [0,8])) in ["genstore","gunstore","vehstore","WalMart"]}) then
 		{
 			[_x] joinSilent _storeGroup;
 		};

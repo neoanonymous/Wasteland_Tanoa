@@ -44,7 +44,7 @@ while { true } do
 					};
 
 					_cheatFlag pushBack ["hacked unit", typeOf _unit, _clientPlayer];*/
-
+					
 					for [{_i = 0}, {_i < 10 && vehicle _unit != _unit}, {_i = _i + 1}] do
 					{
 						moveOut _unit;

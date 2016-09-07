@@ -135,6 +135,10 @@ if (["A3W_survivalSystem"] call isConfigOn) then
 [] spawn
 {
 	[] execVM "client\functions\createGunStoreMarkers.sqf";
+	[] execVM "client\functions\createWalMartMarkers1.sqf";
+	[] execVM "client\functions\createWalMartMarkers2.sqf";
+	[] execVM "client\functions\createWalMartMarkers3.sqf";
+	[] execVM "client\functions\createWalMartMarkers4.sqf";
 
 	if (["A3W_privateParking"] call isConfigOn) then
 	{
@@ -157,6 +161,11 @@ A3W_clientSetupComplete = compileFinal "true";
 
 A3W_scriptThreads pushBack execVM "addons\fpsFix\vehicleManager.sqf";
 A3W_scriptThreads pushBack execVM "addons\Lootspawner\LSclientScan.sqf";
+//frac stuff
+if(hasInterface) then{[] execVM "addons\statusBar\statusbar.sqf"}; //Status Bar
+[] execVM "addons\disableThermal\disablethermal.sqf";  //disable thermal vision
+[] execVM "addons\water_edge\functions.sqf";
+//frac stuff
 [] execVM "client\functions\drawPlayerIcons.sqf";
 [] execVM "addons\camera\functions.sqf";
 [] execVM "addons\UAV_Control\functions.sqf";
@@ -176,3 +185,4 @@ inGameUISetEventHandler ["Action", "_this call A3W_fnc_inGameUIActionEvent"];
 		_x setVariable ["side", playerSide, true];
 	};
 } forEach pvar_spawn_beacons;
+

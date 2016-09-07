@@ -19,6 +19,8 @@ if (["A3W_unlimitedStamina"] call isConfigOn) then
 {
 	_player enableFatigue false;
 	_player enableStamina false;
+	_player allowSprint true;
+	_player setCustomAimCoef 1;
 };
 
 enableSentences false;
@@ -29,3 +31,5 @@ removeVest _player;
 removeBackpack _player;
 removeGoggles _player;
 removeHeadgear _player;
+
+setTerrainGrid 1;

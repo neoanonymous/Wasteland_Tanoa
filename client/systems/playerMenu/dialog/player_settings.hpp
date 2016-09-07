@@ -26,7 +26,7 @@ class playerSettings {
 		{
 			idc = -1;
 			colorText[] = {1, 1, 1, 1};
-			colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, 0.8};
+			colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, 1};
 
 			x = 0;
 			y = 0.1;
@@ -157,45 +157,6 @@ class playerSettings {
 			onButtonClick = "[] execVM 'client\systems\groups\loadGroupManagement.sqf'";
 			x = 0.158; y = 0.66;
 			w = 0.225; h = 0.033 * safezoneH;
-		};
-
-		/*class btnDistanceNear : w_RscButton {
-			idc = -1;
-			text = "Near";
-			onButtonClick = "setViewDistance 1100;";
-			x = 0.02; y = 0.43;
-			w = 0.125; h = 0.033 * safezoneH;
-		};
-
-		class btnDistanceMedium : w_RscButton {
-			idc = -1;
-			text = "Medium";
-			onButtonClick = "setViewDistance 2200;";
-			x = 0.02; y = 0.5;
-			w = 0.125; h = 0.033 * safezoneH;
-		};
-
-		class btnDistanceFar : w_RscButton {
-			idc = -1;
-			text = "Far";
-			onButtonClick = "setViewDistance 3300;";
-			x = 0.02; y = 0.57;
-			w = 0.125; h = 0.033 * safezoneH;
-		};
-
-		class btnDistanceInsane : w_RscButton {
-			text = "Insane";
-			onButtonClick = "setViewDistance 5000;";
-			x = 0.02; y = 0.60;
-			w = 0.125; h = 0.033 * safezoneH;
-		};*/
-
-		class btnDistanceCHVD : w_RscButton {
-			idc = -1;
-			text = "Viewdist.";
-			onButtonClick = "call CHVD_fnc_openDialog";
-			x = 0.02; y = 0.57;
-			w = 0.125; h = 0.033 * safezoneH;
 		};
 	};
 };

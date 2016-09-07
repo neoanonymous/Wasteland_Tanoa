@@ -30,11 +30,9 @@ if (getObjectViewDistance select 0 != CHVD_targetObj) then
 	setObjectViewDistance CHVD_targetObj;
 };
 
-if (CHVD_allowTerrain && getTerrainGrid != CHVD_targetTerrain) then
+if (getTerrainGrid != CHVD_targetTerrain) then
 {
 	setTerrainGrid CHVD_targetTerrain;
 };
-
-if (canSuspend) then { sleep 0.1 };
 
 false

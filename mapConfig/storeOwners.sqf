@@ -24,10 +24,13 @@ storeOwnerConfig = compileFinal str
 	// Buttons you can disable: "Land", "Armored", "Tanks", "Helicopters", "Boats", "Planes"
 	["VehStore1", -1, [], []],
 	["VehStore2", -1, [], []],
-	["VehStore3", -1, [], []],
 	["VehStore4", -1, [], ["Planes"]],
 	["VehStore5", -1, [], ["Planes"]],
-	["VehStore6", -1, [], ["Boats"]]
+	
+	["WalMart1", -1, [], []],
+	["WalMart2", -1, [], []],
+	["WalMart3", -1, [], []],
+	["WalMart4", -1, [], []]
 ];
 
 // Outfits for store owners
@@ -49,5 +52,7 @@ storeOwnerConfigAppearance = compileFinal str
 	["VehStore3", [["weapon", ""], ["uniform", "U_Competitor"]]],
 	["VehStore4", [["weapon", ""], ["uniform", "U_Competitor"]]],
 	["VehStore5", [["weapon", ""], ["uniform", "U_Competitor"]]],
-	["VehStore6", [["weapon", ""], ["uniform", "U_Competitor"]]]
+	["VehStore6", [["weapon", ""], ["uniform", "U_Competitor"]]],
+	
+	["WalMart1", [["weapon", "arifle_AK12_GL_F"], ["uniform", "U_Competitor"]]]
 ];

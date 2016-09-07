@@ -28,9 +28,8 @@ X_Server = false;
 X_Client = false;
 X_JIP = false;
 
-CHVD_allowNoGrass = false;
-CHVD_allowTerrain = false; // terrain option has been disabled out from the menu due to terrible code, this variable has currently no effect
-CHVD_maxView = 3000; // Set maximum view distance (default: 12000)
+CHVD_allowTerrain = true;
+CHVD_maxView = 3300; // Set maximum view distance (default: 12000)
 CHVD_maxObj = 3000; // Set maximimum object view distance (default: 12000)
 
 // versionName = ""; // Set in STR_WL_WelcomeToWasteland in stringtable.xml
@@ -101,12 +100,11 @@ if (hasInterface || isServer) then
 	[] execVM "addons\lsd_nvg\init.sqf";
 	[] execVM "addons\stickyCharges\init.sqf";
 	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
+	//[] execVM "addons\scripts\servercredits.sqf"; //Intro Credits
+	[] execVM "addons\HvT\HvT.sqf"; // High Value Target
+	[] execVM "addons\HvT\HvD.sqf"; // High Value Drugs
+	[] execVM "addons\zlt_fastrope\zlt_fastrope.sqf";     // Fastrope
+	[] execVM "addons\disableThermal\disablethermal.sqf";
+	[] execVM "addons\laptop\init.sqf";
+	[] execVM "addons\Grenades\initGrenades.sqf"; // Toxic Gas Grenades
 };
-
-// Remove line drawings from map
-(createTrigger ["EmptyDetector", [0,0,0], false]) setTriggerStatements
-[
-	"!triggerActivated thisTrigger", 
-	"thisTrigger setTriggerTimeout [30,30,30,false]",
-	"{if (markerShape _x == 'POLYLINE') then {deleteMarker _x}} forEach allMapMarkers"
-];
